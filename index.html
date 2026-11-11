@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Bad Clown Girls — la agencia de video girls y modelos más profesional del negocio. Talento para videos musicales, películas, comerciales, fotografía y eventos. Inscríbete: solo mayores de 18 años." />
+    <link rel="icon" href="data:," />
+    <title>Bad Clown Girls — Agencia de Video Girls y Modelos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #070605;
+        --bg-2: #0d0b08;
+        --panel: #12100b;
+        --panel-2: #171410;
+        --gold: #c9a227;
+        --gold-2: #e8c766;
+        --gold-deep: #8a6d1c;
+        --ink: #f4ecda;
+        --muted: #bcae8e;
+        --faint: #8d8168;
+        --line: rgba(201, 162, 39, 0.28);
+        --line-soft: rgba(201, 162, 39, 0.14);
+        --red: #d84b4b;
+        --radius: 14px;
+        --font-display: "Cinzel", "Times New Roman", serif;
+        --font-body: "Jost", "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--font-body);
+        font-size: 17px;
+        line-height: 1.6;
+        padding-bottom: 76px;
+      }
+      img, video { max-width: 100%; display: block; }
+      a { color: var(--gold-2); }
+      section { scroll-margin-top: 20px; }
+      .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+      /* ---------- Buttons ---------- */
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+        min-height: 52px; padding: 14px 34px;
+        font-family: var(--font-display); font-weight: 700; font-size: 16px;
+        letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
+        color: #171106; background: linear-gradient(160deg, var(--gold-2), var(--gold) 55%, var(--gold-deep));
+        border: 1px solid #f0d47a; border-radius: 999px; cursor: pointer;
+        box-shadow: 0 6px 26px rgba(201, 162, 39, 0.35);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+      }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(201, 162, 39, 0.5); }
+      .btn:active { transform: translateY(0); }
+      .btn.ghost {
+        background: transparent; color: var(--gold-2);
+        border: 1px solid var(--gold); box-shadow: none;
+      }
+      .btn.ghost:hover { background: rgba(201, 162, 39, 0.1); }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        position: relative; text-align: center;
+        padding: 44px 20px 0;
+        background:
+          radial-gradient(ellipse 70% 46% at 50% -6%, rgba(201, 162, 39, 0.22), transparent 65%),
+          linear-gradient(180deg, #0b0906 0%, var(--bg) 78%);
+        overflow: hidden;
+      }
+      .logo-stage { position: relative; width: fit-content; max-width: 100%; margin: 0 auto; }
+      .logo-stage::before {
+        content: ""; position: absolute; inset: -14% -20%; z-index: 0; pointer-events: none;
+        background: radial-gradient(ellipse 56% 50% at 50% 46%, rgba(232, 199, 102, 0.4), rgba(201, 162, 39, 0.15) 46%, transparent 70%);
+        animation: haloPulse 5.5s ease-in-out infinite;
+      }
+      .logo-stage::after {
+        content: ""; position: absolute; top: 0; bottom: 0; left: -45%; width: 42%; z-index: 2; pointer-events: none;
+        background: linear-gradient(100deg, transparent, rgba(255, 238, 175, 0.17), transparent);
+        transform: skewX(-16deg);
+        -webkit-mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
+        mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
+        animation: logoShine 6.5s ease-in-out infinite;
+      }
+      @keyframes haloPulse {
+        0%, 100% { opacity: 0.75; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.05); }
+      }
+      @keyframes logoShine {
+        0%, 52% { left: -45%; }
+        88%, 100% { left: 112%; }
+      }
+      .hero .logo {
+        position: relative; z-index: 1;
+        width: min(430px, 82vw); height: auto; aspect-ratio: 2200 / 2480;
+        object-fit: contain; margin: 0 auto;
+        mix-blend-mode: screen;
+      }
+      .hero h1 {
+        font-family: var(--font-display); font-weight: 800;
+        font-size: clamp(30px, 5.6vw, 54px); line-height: 1.14;
+        margin: 10px auto 14px; max-width: 880px; letter-spacing: 0.01em;
+      }
+      .hero h1 em { font-style: normal; color: var(--gold-2); }
+      .hero p.lede {
+        max-width: 680px; margin: 0 auto 28px;
+        font-size: clamp(17px, 2.4vw, 20px); font-weight: 300; color: var(--muted);
+      }
+      .hero .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
+      .hero .age-note { font-size: 13.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); margin: 4px 0 34px; }
+      .hero-photo {
+        max-width: 1060px; margin: 0 auto;
+        border: 1px solid var(--line); border-bottom: none;
+        border-radius: 18px 18px 0 0; overflow: hidden;
+        box-shadow: 0 -6px 60px rgba(0,0,0,0.6);
+      }
+      .hero-photo img { width: 100%; height: auto; }
+
+      /* ---------- Section scaffolding ---------- */
+      .section { padding: 76px 0 8px; }
+      .sec-head { text-align: center; max-width: 760px; margin: 0 auto 40px; }
+      .sec-head .rule {
+        display: flex; align-items: center; gap: 14px; justify-content: center; margin-bottom: 18px;
+      }
+      .sec-head .rule::before, .sec-head .rule::after {
+        content: ""; height: 1px; width: 64px;
+        background: linear-gradient(90deg, transparent, var(--gold));
+      }
+      .sec-head .rule::after { background: linear-gradient(90deg, var(--gold), transparent); }
+      .sec-head .rule span { color: var(--gold); font-size: 13px; letter-spacing: 0.42em; text-transform: uppercase; font-weight: 500; }
+      .sec-head h2 {
+        font-family: var(--font-display); font-weight: 700;
+        font-size: clamp(26px, 4.4vw, 40px); line-height: 1.2; margin: 0 0 12px;
+      }
+      .sec-head p { color: var(--muted); font-weight: 300; font-size: 18px; margin: 0; }
+
+      /* ---------- Services ---------- */
+      .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      .service {
+        background: linear-gradient(180deg, var(--panel-2), var(--panel));
+        border: 1px solid var(--line-soft); border-radius: var(--radius);
+        padding: 30px 26px 26px;
+      }
+      .service .ic {
+        width: 54px; height: 54px; border-radius: 50%;
+        border: 1px solid var(--line); display: grid; place-items: center;
+        background: rgba(201, 162, 39, 0.08); margin-bottom: 18px;
+      }
+      .service .ic svg { width: 26px; height: 26px; stroke: var(--gold-2); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+      .service h3 { font-family: var(--font-display); font-size: 19px; font-weight: 700; margin: 0 0 8px; letter-spacing: 0.02em; }
+      .service p { margin: 0; color: var(--muted); font-weight: 300; font-size: 16px; }
+
+      /* ---------- Pillars ---------- */
+      .agency {
+        margin-top: 64px;
+        border: 1px solid var(--line); border-radius: 20px;
+        background:
+          radial-gradient(ellipse 60% 90% at 100% 0%, rgba(201, 162, 39, 0.12), transparent 60%),
+          linear-gradient(180deg, #14110a, #0c0a07);
+        padding: clamp(28px, 5vw, 52px);
+        display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center;
+      }
+      .agency h2 { font-family: var(--font-display); font-size: clamp(25px, 3.6vw, 36px); line-height: 1.22; margin: 0 0 14px; }
+      .agency h2 em { font-style: normal; color: var(--gold-2); }
+      .agency p { color: var(--muted); font-weight: 300; margin: 0 0 24px; font-size: 17.5px; }
+      .pillars { display: grid; gap: 18px; }
+      .pillar { display: flex; gap: 16px; align-items: flex-start; }
+      .pillar .n {
+        flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%;
+        border: 1px solid var(--gold); color: var(--gold-2);
+        font-family: var(--font-display); font-weight: 700; font-size: 17px;
+        display: grid; place-items: center; background: rgba(201,162,39,0.07);
+      }
+      .pillar h3 { margin: 2px 0 4px; font-size: 18px; font-weight: 600; letter-spacing: 0.01em; }
+      .pillar p { margin: 0; color: var(--muted); font-weight: 300; font-size: 15.5px; }
+
+      /* ---------- Gallery ---------- */
+      .gallery { columns: 3; column-gap: 16px; }
+      .gallery figure {
+        margin: 0 0 16px; break-inside: avoid; border-radius: var(--radius);
+        overflow: hidden; border: 1px solid var(--line-soft);
+        cursor: zoom-in; position: relative; background: var(--panel);
+      }
+      .gallery figure img { width: 100%; height: auto; transition: transform 0.35s ease; }
+      .gallery figure:hover img { transform: scale(1.03); }
+      .gallery figcaption {
+        position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 14px 10px;
+        font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #efe3c2;
+        background: linear-gradient(180deg, transparent, rgba(0,0,0,0.78));
+        opacity: 0; transition: opacity 0.25s ease; pointer-events: none;
+      }
+      .gallery figure:hover figcaption, .gallery figure:focus-visible figcaption { opacity: 1; }
+
+      /* ---------- Videos ---------- */
+      .videos-wide { display: grid; gap: 20px; margin-bottom: 20px; }
+      .videos-vert { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 760px; margin: 0 auto; }
+      .vcard { border: 1px solid var(--line-soft); border-radius: var(--radius); overflow: hidden; background: #000; }
+      .vcard video { width: 100%; height: auto; background: #000; }
+      .vcard .cap {
+        padding: 12px 16px; font-size: 14.5px; color: var(--muted);
+        background: var(--panel); display: flex; justify-content: space-between; gap: 10px; align-items: baseline;
+      }
+      .vcard .cap strong { color: var(--ink); font-family: var(--font-display); font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; white-space: nowrap; }
+      @media (min-width: 900px) {
+        .videos-wide { grid-template-columns: 1fr 1fr; }
+      }
+
+      /* ---------- CTA band ---------- */
+      .cta-band {
+        margin-top: 72px; text-align: center;
+        border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft);
+        background: radial-gradient(ellipse 55% 120% at 50% 50%, rgba(201,162,39,0.13), transparent 70%);
+        padding: 52px 20px;
+      }
+      .cta-band h2 { font-family: var(--font-display); font-size: clamp(24px, 4vw, 36px); margin: 0 0 10px; }
+      .cta-band p { color: var(--muted); font-weight: 300; margin: 0 auto 26px; max-width: 560px; }
+
+      /* ---------- Clientes ---------- */
+      .btn svg { width: 20px; height: 20px; flex: 0 0 auto; }
+      .btn.small { min-height: 46px; padding: 10px 24px; font-size: 13.5px; }
+      .client-contact { text-align: center; margin-bottom: 34px; }
+      .client-contact .phone-label { font-size: 13px; letter-spacing: 0.34em; text-transform: uppercase; color: var(--faint); margin: 0 0 6px; }
+      .client-contact .phone-big {
+        font-family: var(--font-display); font-weight: 800;
+        font-size: clamp(30px, 6vw, 46px); letter-spacing: 0.03em;
+        color: var(--gold-2); text-decoration: none; display: inline-block; margin-bottom: 22px;
+      }
+      .client-contact .phone-big:hover { color: var(--gold); }
+      .contact-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+      .client-shell h3.form-title { font-family: var(--font-display); font-size: 24px; margin: 0 0 8px; text-align: center; }
+      .client-shell .form-sub { text-align: center; color: var(--muted); font-weight: 300; margin: 0 auto 28px; max-width: 560px; }
+      footer .contact-row { margin: 18px 0 10px; }
+
+      /* ---------- Form ---------- */
+      .form-shell {
+        max-width: 860px; margin: 0 auto;
+        border: 1px solid var(--line); border-radius: 20px;
+        background: linear-gradient(180deg, #131009, #0b0906);
+        padding: clamp(24px, 4.5vw, 46px);
+      }
+      .age-banner {
+        display: flex; gap: 14px; align-items: flex-start;
+        border: 1px solid var(--gold); border-radius: 12px;
+        background: rgba(201, 162, 39, 0.1);
+        padding: 16px 18px; margin-bottom: 28px;
+      }
+      .age-banner svg { flex: 0 0 auto; width: 26px; height: 26px; stroke: var(--gold-2); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-top: 2px; }
+      .age-banner p { margin: 0; font-size: 15.5px; }
+      .age-banner strong { color: var(--gold-2); }
+      .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+      .field { margin-bottom: 18px; }
+      .field label { display: block; font-weight: 500; font-size: 15px; margin-bottom: 7px; letter-spacing: 0.02em; }
+      .field label .req { color: var(--gold-2); }
+      .field input[type="text"], .field input[type="email"], .field input[type="tel"],
+      .field input[type="date"], .field select, .field textarea {
+        width: 100%; min-height: 50px; padding: 12px 14px;
+        background: #0a0806; color: var(--ink);
+        border: 1px solid #3a332a; border-radius: 10px;
+        font-family: var(--font-body); font-size: 16.5px;
+      }
+      .field textarea { min-height: 96px; resize: vertical; }
+      .field input:focus, .field select:focus, .field textarea:focus {
+        outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold);
+      }
+      .field .hint { font-size: 13.5px; color: var(--faint); margin-top: 5px; }
+      .field .err { display: none; font-size: 14px; color: var(--red); margin-top: 6px; font-weight: 500; }
+      .field.invalid input, .field.invalid select { border-color: var(--red); }
+      .field.invalid .err { display: block; }
+
+      .uploads { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 6px 0 20px; }
+      .upload {
+        border: 1.5px dashed rgba(201,162,39,0.45); border-radius: 14px;
+        padding: 14px; text-align: center; background: rgba(201,162,39,0.04);
+        transition: border-color 0.2s ease, background 0.2s ease;
+      }
+      .upload.has-file { border-style: solid; border-color: var(--gold); background: rgba(201,162,39,0.08); }
+      .upload .thumb {
+        width: 100%; aspect-ratio: 3 / 4; border-radius: 9px; overflow: hidden;
+        background: #0a0806; display: grid; place-items: center; margin-bottom: 10px;
+      }
+      .upload .thumb img { width: 100%; height: 100%; object-fit: cover; }
+      .upload .thumb svg { width: 40px; height: 40px; stroke: var(--gold); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; opacity: 0.75; }
+      .upload h4 { margin: 0 0 2px; font-size: 15.5px; font-weight: 600; }
+      .upload p { margin: 0 0 12px; font-size: 13px; color: var(--faint); line-height: 1.45; }
+      .upload .pick {
+        display: inline-flex; align-items: center; justify-content: center;
+        min-height: 44px; padding: 10px 18px; border-radius: 999px; cursor: pointer;
+        border: 1px solid var(--gold); color: var(--gold-2);
+        font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      }
+      .upload .pick:hover { background: rgba(201,162,39,0.12); }
+      .upload input[type="file"] { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; }
+      .upload .fname { display: none; font-size: 12.5px; color: var(--gold-2); margin-top: 9px; word-break: break-all; }
+      .upload.has-file .fname { display: block; }
+
+      .checks { display: grid; gap: 12px; margin: 22px 0 26px; }
+      .check {
+        display: flex; gap: 12px; align-items: flex-start; cursor: pointer;
+        border: 1px solid var(--line-soft); border-radius: 12px; padding: 14px 16px;
+        background: rgba(255,255,255,0.015); min-height: 52px;
+      }
+      .check input { width: 22px; height: 22px; flex: 0 0 auto; margin-top: 2px; accent-color: var(--gold); cursor: pointer; }
+      .check span { font-size: 15px; line-height: 1.5; }
+      .check.invalid { border-color: var(--red); }
+
+      .form-err {
+        display: none; border: 1px solid var(--red); border-radius: 12px;
+        background: rgba(216, 75, 75, 0.1); color: #f0b9b9;
+        padding: 14px 16px; font-size: 15px; margin-bottom: 20px;
+      }
+      .form-err.show { display: block; }
+      .submit-btn { width: 100%; font-size: 17px; min-height: 58px; }
+      .form-note { text-align: center; color: var(--faint); font-size: 13.5px; margin: 16px 0 0; }
+
+      .success {
+        display: none; text-align: center; padding: 12px 4px 4px;
+      }
+      .success.show { display: block; }
+      .success .ring {
+        width: 74px; height: 74px; margin: 0 auto 18px; border-radius: 50%;
+        border: 1px solid var(--gold); display: grid; place-items: center;
+        background: rgba(201,162,39,0.1);
+      }
+      .success .ring svg { width: 34px; height: 34px; stroke: var(--gold-2); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .success h3 { font-family: var(--font-display); font-size: 24px; margin: 0 0 10px; }
+      .success p { color: var(--muted); font-weight: 300; max-width: 520px; margin: 0 auto 14px; }
+      .success .attach {
+        border: 1px solid var(--gold); border-radius: 12px; background: rgba(201,162,39,0.09);
+        padding: 14px 16px; max-width: 520px; margin: 0 auto 22px; font-size: 15.5px;
+      }
+      .success .attach strong { color: var(--gold-2); }
+
+      /* ---------- Footer ---------- */
+      footer {
+        margin-top: 84px; border-top: 1px solid var(--line-soft);
+        padding: 40px 20px 34px; text-align: center;
+      }
+      footer .flogo { position: relative; z-index: 1; width: 120px; height: auto; aspect-ratio: 2200 / 2480; object-fit: contain; margin: 0 auto; mix-blend-mode: screen; }
+      footer p { color: var(--faint); font-size: 14px; margin: 4px 0; font-weight: 300; }
+      footer .brand { font-family: var(--font-display); color: var(--gold-2); letter-spacing: 0.2em; font-size: 14px; text-transform: uppercase; }
+
+      /* ---------- Sticky CTA ---------- */
+      .sticky-cta {
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+        background: rgba(9, 7, 5, 0.92); backdrop-filter: blur(10px);
+        border-top: 1px solid var(--line);
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+        display: flex; align-items: center; justify-content: center; gap: 16px;
+      }
+      .sticky-cta .txt { font-family: var(--font-display); letter-spacing: 0.06em; font-size: 15px; color: var(--ink); }
+      .sticky-cta .btn { min-height: 46px; padding: 10px 26px; font-size: 14px; }
+
+      /* ---------- Lightbox ---------- */
+      .lightbox {
+        position: fixed; inset: 0; z-index: 60; display: none;
+        background: rgba(4, 3, 2, 0.94); align-items: center; justify-content: center; padding: 20px;
+      }
+      .lightbox.open { display: flex; }
+      .lightbox img { max-width: min(92vw, 900px); max-height: 86vh; border: 1px solid var(--line); border-radius: 12px; object-fit: contain; }
+      .lightbox .close {
+        position: absolute; top: 14px; right: 14px; width: 48px; height: 48px;
+        border-radius: 50%; border: 1px solid var(--gold); background: rgba(0,0,0,0.6);
+        color: var(--gold-2); font-size: 24px; line-height: 1; cursor: pointer;
+      }
+      .lightbox .cap { position: absolute; bottom: 18px; left: 0; right: 0; text-align: center; color: var(--muted); font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; }
+
+      @media (max-width: 900px) {
+        .services { grid-template-columns: 1fr 1fr; }
+        .agency { grid-template-columns: 1fr; }
+        .gallery { columns: 2; }
+      }
+      @media (max-width: 620px) {
+        .hero { padding-top: 26px; }
+        .hero .logo { width: min(248px, 64vw); }
+        .hero h1 { font-size: 29px; margin-top: 4px; }
+        .hero p.lede { font-size: 16.5px; margin-bottom: 22px; }
+        .hero .age-note { margin-bottom: 26px; }
+        .services { grid-template-columns: 1fr; }
+        .grid2 { grid-template-columns: 1fr; }
+        .uploads { grid-template-columns: 1fr; }
+        .upload .thumb { aspect-ratio: 16 / 10; }
+        .videos-vert { grid-template-columns: 1fr; max-width: 400px; }
+        .sticky-cta .txt { display: none; }
+        .section { padding-top: 58px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .gallery figure img, .btn { transition: none; }
+        .logo-stage::before, .logo-stage::after { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="logo-stage"><img class="logo" src="assets/asset-01.webp" alt="Logo oficial de Bad Clown Girls: máscara glam dorada sobre negro" width="2200" height="2480" /></div>
+      <h1>El escenario donde <em>tu talento</em> se vuelve carrera</h1>
+      <p class="lede">Bad Clown Girls es la agencia de video girls y modelos más profesional del negocio. Representamos talento para las producciones más grandes de la industria del entretenimiento — y estamos buscando caras nuevas.</p>
+      <div class="cta-row">
+        <a class="btn" href="#unirme">Quiero unirme</a>
+        <a class="btn ghost" href="#clientes">Contratar modelos</a>
+        <a class="btn ghost" href="#videos">Ver el trabajo</a>
+      </div>
+      <p class="age-note">Inscripción exclusiva para mayores de 18 años</p>
+      <div class="hero-photo">
+        <img src="assets/asset-02.webp" alt="Modelo de Bad Clown Girls actuando en una escena de cine en una calle de New York, rodeada del equipo de producción" width="1920" height="1280" />
+      </div>
+    </header>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section" id="servicios">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="rule"><span>Servicios</span></div>
+          <h2>Talento profesional para cada producción</h2>
+          <p>Nuestras modelos están disponibles y preparadas para trabajar en todo tipo de proyecto audiovisual y de entretenimiento.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+            <h3>Videos musicales</h3>
+            <p>Video girls con presencia, ritmo y actitud para los videos de los artistas más pegados del género urbano y más allá.</p>
+          </article>
+          <article class="service">
+            <div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M7 4l3 5M13 4l3 5"/></svg></div>
+            <h3>Películas y series</h3>
+            <p>Modelos y actrices de reparto listas para cine y televisión: puntuales, dirigibles y con dominio frente a cámara.</p>
+          </article>
+          <article class="service">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l14-6v14L3 13v-2z"/><path d="M7 13v5a2 2 0 0 0 4 0v-4"/><path d="M17 8a4 4 0 0 1 0 8"/></svg></div>
+            <h3>Comerciales y marcas</h3>
+            <p>La imagen que tu marca necesita: campañas publicitarias, comerciales de TV y contenido para redes con acabado profesional.</p>
+          </article>
+          <article class="service">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+            <h3>Fotografía editorial</h3>
+            <p>Sesiones de alto nivel con fotógrafos profesionales: portafolios, campañas de moda, revistas y contenido exclusivo.</p>
+          </article>
+          <article class="service">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.2L21 9l-5 4.4L17.5 20 12 16.6 6.5 20 8 13.4 3 9l6.6-.8z"/></svg></div>
+            <h3>Eventos y pasarela</h3>
+            <p>Presencia en eventos, alfombras, lanzamientos y pasarelas. Elegancia y seguridad en cada aparición pública.</p>
+          </article>
+          <article class="service">
+            <div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+            <h3>Promoción y redes</h3>
+            <p>Hostess, activaciones de marca y creadoras de contenido que conectan con el público dentro y fuera de cámara.</p>
+          </article>
+        </div>
+
+        <div class="agency">
+          <div>
+            <h2>La agencia que trabaja <em>al nivel más alto</em> del negocio</h2>
+            <p>En Bad Clown Girls no improvisamos. Cada modelo es seleccionada, preparada y representada con el estándar de las grandes producciones: imagen cuidada, compromiso real y un equipo que respalda tu carrera en cada proyecto.</p>
+            <a class="btn" href="#unirme">Quiero unirme</a>
+          </div>
+          <div class="pillars">
+            <div class="pillar">
+              <div class="n">1</div>
+              <div>
+                <h3>Selección profesional</h3>
+                <p>Revisamos cada solicitud personalmente. Entrar a Bad Clown Girls es formar parte de un roster exclusivo y respetado.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="n">2</div>
+              <div>
+                <h3>Producciones de verdad</h3>
+                <p>Sets completos, fotógrafos, camarógrafos y dirección profesional. Así se trabaja cuando el proyecto es serio.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="n">3</div>
+              <div>
+                <h3>Respaldo total</h3>
+                <p>Una agencia de Bad Clown Family que cuida a su talento: comunicación clara, trato profesional y oportunidades reales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOTOS ============ -->
+    <section class="section" id="fotos">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="rule"><span>Galería</span></div>
+          <h2>Así se ve una Bad Clown Girl</h2>
+          <p>Glamour nocturno, actitud de video musical y producción de primer nivel. Toca cualquier foto para verla en grande.</p>
+        </div>
+        <div class="gallery" id="gallery">
+          <figure tabindex="0"><img src="assets/asset-03.webp" alt="Modelo con chaqueta de cuero negra y botas de tachuelas posando en una escalera industrial" width="1136" height="1808" /><figcaption>Sesión cuero — escalera industrial</figcaption></figure>
+          <figure tabindex="0"><img src="assets/asset-04.webp" alt="Modelo sentada con chaqueta de cuero, guantes y botas altas en sesión de estudio" width="1216" height="1936" /><figcaption>Sesión cuero — pose sentada</figcaption></figure>
+          <figure tabindex="0"><img src="assets/asset-05.webp" alt="Modelo con chaqueta de cuero de tachuelas y un brazo sobre la cabeza en set industrial" width="1120" height="1920" /><figcaption>Sesión cuero — actitud total</figcaption></figure>
+          <figure tabindex="0"><img src="assets/asset-06.webp" alt="Modelo afro-latina sentada en silla transparente con chaqueta de cuero, body negro y botas altas de tacón" width="1152" height="1824" /><figcaption>Sesión cuero — silla transparente</figcaption></figure>
+          <figure tabindex="0"><img src="assets/asset-07.webp" alt="Modelo afroamericana con afro grande, blazer de cuero negro y medias de encaje" width="1120" height="1904" /><figcaption>Afro glam — blazer de cuero</figcaption></figure>
+          <figure tabindex="0"><img src="assets/asset-08.webp" alt="Modelo de pelo negro largo y lacio con catsuit de cuero sentada en una escalera" width="1728" height="1248" /><figcaption>Catsuit de cuero — escalera</figcaption></figure>
+          <figure tabindex="0"><img src="assets/asset-09.webp" alt="Modelo con maquillaje gótico de fotografía profesional y látigo negro de cuero en set oscuro" width="1920" height="1280" /><figcaption>Serie gótica — maquillaje editorial</figcaption></figure>
+          <figure tabindex="0"><img src="assets/asset-10.webp" alt="Modelo gótica con látigo negro de cuero posando en producción fotográfica oscura" width="1376" height="1824" /><figcaption>Serie gótica — segunda toma</figcaption></figure>
+          <figure tabindex="0"><img src="assets/asset-11.webp" alt="Modelo gótica con maquillaje fancy y látigo negro de cuero en set de fotografía" width="1376" height="1824" /><figcaption>Serie gótica — tercera toma</figcaption></figure>
+          <figure tabindex="0"><img src="assets/asset-12.webp" alt="Vista completa del set gótico con luna roja, humo, la modelo al centro y los fotógrafos y camarógrafos trabajando" width="1920" height="1280" /><figcaption>El set completo — detrás de cámaras</figcaption></figure>
+          <figure tabindex="0"><img src="assets/asset-02.webp" alt="Modelo actuando en plena grabación de una escena en una calle de New York con el equipo de cine alrededor" width="1920" height="1280" /><figcaption>Actuando en New York</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VIDEOS ============ -->
+    <section class="section" id="videos">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="rule"><span>Videos</span></div>
+          <h2>Detrás de cámaras</h2>
+          <p>Esto no es un sueño: son producciones reales en movimiento. Luces, cámaras, equipo completo — y tú puedes ser la próxima frente al lente.</p>
+        </div>
+        <div class="videos-wide">
+          <div class="vcard">
+            <video controls preload="none" playsinline poster="assets/asset-13.jpg" src="assets/asset-14.mp4"></video>
+            <div class="cap"><strong>Set gótico</strong><span>El equipo en acción, cámara fija</span></div>
+          </div>
+          <div class="vcard">
+            <video controls preload="none" playsinline poster="assets/asset-15.jpg" src="assets/asset-16.mp4"></video>
+            <div class="cap"><strong>New York</strong><span>Grabando una escena en la calle</span></div>
+          </div>
+        </div>
+        <div class="videos-vert">
+          <div class="vcard">
+            <video controls preload="none" playsinline poster="assets/asset-17.jpg" src="assets/asset-18.mp4"></video>
+            <div class="cap"><strong>Photoshoot</strong><span>Cuero negro en el set</span></div>
+          </div>
+          <div class="vcard">
+            <video controls preload="none" playsinline poster="assets/asset-19.jpg" src="assets/asset-20.mp4"></video>
+            <div class="cap"><strong>Photoshoot</strong><span>Cuero blanco, de frente</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLIENTES ============ -->
+    <section class="section" id="clientes">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="rule"><span>Para clientes</span></div>
+          <h2>Contrata a nuestras modelos</h2>
+          <p>¿Eres artista, productor, marca u organizador de eventos? Nuestras video girls y modelos están disponibles para tu proyecto — videos musicales, películas, comerciales, sesiones de fotos y eventos — con la puntualidad, la imagen y la profesionalidad que distingue a Bad Clown Girls.</p>
+        </div>
+
+        <div class="client-contact">
+          <p class="phone-label">Línea de la compañía</p>
+          <a class="phone-big" href="tel:+13528398557">(352) 839-8557</a>
+          <div class="contact-row">
+            <a class="btn" href="tel:+13528398557"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Llamar ahora</a>
+                        <a class="btn ghost" href="mailto:info@badclownfamily.site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Escribir por correo</a>
+          </div>
+        </div>
+
+        <div class="form-shell client-shell">
+          <h3 class="form-title">Solicita tu talento</h3>
+          <p class="form-sub">Cuéntanos de tu proyecto y te respondemos con disponibilidad, perfiles y cotización. Sin compromiso.</p>
+          <form id="clientForm" novalidate>
+            <div class="grid2">
+              <div class="field" id="cf-nombre">
+                <label for="cliNombre">Tu nombre <span class="req">*</span></label>
+                <input type="text" id="cliNombre" name="cliNombre" autocomplete="name" placeholder="Tu nombre y apellido" />
+                <p class="err">Escribe tu nombre.</p>
+              </div>
+              <div class="field">
+                <label for="cliCompania">Compañía o nombre artístico</label>
+                <input type="text" id="cliCompania" name="cliCompania" placeholder="Ej: tu disquera, marca o nombre de artista" />
+              </div>
+            </div>
+            <div class="grid2">
+              <div class="field" id="cf-telefono">
+                <label for="cliTelefono">Teléfono <span class="req">*</span></label>
+                <input type="tel" id="cliTelefono" name="cliTelefono" autocomplete="tel" placeholder="Ej: 407-555-0123" />
+                <p class="err">Escribe un teléfono válido para contactarte.</p>
+              </div>
+              <div class="field" id="cf-email">
+                <label for="cliEmail">Email <span class="req">*</span></label>
+                <input type="email" id="cliEmail" name="cliEmail" autocomplete="email" placeholder="tucorreo@email.com" />
+                <p class="err">Escribe un email válido.</p>
+              </div>
+            </div>
+            <div class="grid2">
+              <div class="field" id="cf-tipo">
+                <label for="cliTipo">Tipo de proyecto <span class="req">*</span></label>
+                <select id="cliTipo" name="cliTipo">
+                  <option value="">Selecciona una opción</option>
+                  <option>Video musical</option>
+                  <option>Película o serie</option>
+                  <option>Comercial</option>
+                  <option>Sesión de fotos</option>
+                  <option>Evento</option>
+                  <option>Otro proyecto</option>
+                </select>
+                <p class="err">Selecciona el tipo de proyecto.</p>
+              </div>
+              <div class="field" id="cf-ciudad">
+                <label for="cliCiudad">Ciudad del proyecto <span class="req">*</span></label>
+                <input type="text" id="cliCiudad" name="cliCiudad" placeholder="Ej: Miami" />
+                <p class="err">Escribe la ciudad del proyecto.</p>
+              </div>
+            </div>
+            <div class="grid2">
+              <div class="field" id="cf-fecha">
+                <label for="cliFecha">Fecha del proyecto <span class="req">*</span></label>
+                <input type="date" id="cliFecha" name="cliFecha" />
+                <p class="err">Selecciona la fecha del proyecto.</p>
+              </div>
+              <div class="field" id="cf-cantidad">
+                <label for="cliCantidad">¿Cuántas modelos necesitas? <span class="req">*</span></label>
+                <select id="cliCantidad" name="cliCantidad">
+                  <option value="">Selecciona una opción</option>
+                  <option>1 modelo</option>
+                  <option>2 modelos</option>
+                  <option>3 modelos</option>
+                  <option>4 modelos</option>
+                  <option>5 o más</option>
+                </select>
+                <p class="err">Selecciona cuántas modelos necesitas.</p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="cliMensaje">Cuéntanos de tu proyecto <span style="color:var(--faint); font-weight:300;">(opcional)</span></label>
+              <textarea id="cliMensaje" name="cliMensaje" placeholder="El concepto, el estilo que buscas, horarios, presupuesto..."></textarea>
+            </div>
+
+            <div class="form-err" id="clientErr" role="alert"></div>
+
+            <button type="submit" class="btn submit-btn" id="clientSubmitBtn">Enviar solicitud de contratación</button>
+            <p class="form-note">¿Prefieres hablar directo? Llámanos al (352) 839-8557 o escríbenos a info@badclownfamily.site.</p>
+          </form>
+
+          <div class="success" id="clientSuccess">
+            <div class="ring"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <h3>¡Solicitud recibida!</h3>
+            <p>Tu solicitud de contratación llegó a la agencia. Te contactamos muy pronto con la disponibilidad de nuestras modelos para tu proyecto.</p>
+            <div class="attach">Si tu proyecto es urgente, llámanos ahora al <strong>(352) 839-8557</strong> o escríbenos a <strong>info@badclownfamily.site</strong>.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Tu lugar está frente a la cámara</h2>
+        <p>Si tienes la presencia, la actitud y las ganas de trabajar en serio, queremos conocerte. La inscripción es gratis y toma menos de cinco minutos.</p>
+        <a class="btn" href="#unirme">Quiero unirme</a>
+      </div>
+    </div>
+
+    <!-- ============ FORMULARIO ============ -->
+    <section class="section" id="unirme">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="rule"><span>Inscripción</span></div>
+          <h2>Únete a Bad Clown Girls</h2>
+          <p>Completa tu solicitud con tus datos y tus tres fotos. Nuestro equipo la revisa personalmente y te contacta si tu perfil encaja con el roster.</p>
+        </div>
+
+        <div class="form-shell">
+          <div class="age-banner">
+            <svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+            <p><strong>Solo mayores de 18 años.</strong> La inscripción a Bad Clown Girls es exclusiva para mujeres de 18 años o más. Tu fecha de nacimiento se verifica en la solicitud: si eres menor de edad, no podrás completarla.</p>
+          </div>
+
+          <form id="applyForm" novalidate>
+            <div class="grid2">
+              <div class="field" id="f-nombre">
+                <label for="nombre">Nombre completo <span class="req">*</span></label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Tu nombre y apellido" />
+                <p class="err">Escribe tu nombre completo.</p>
+              </div>
+              <div class="field" id="f-nacimiento">
+                <label for="nacimiento">Fecha de nacimiento <span class="req">*</span></label>
+                <input type="date" id="nacimiento" name="nacimiento" autocomplete="bday" />
+                <p class="hint">Debes tener 18 años o más para inscribirte.</p>
+                <p class="err" id="nacimientoErr">Debes ser mayor de 18 años para inscribirte.</p>
+              </div>
+            </div>
+            <div class="grid2">
+              <div class="field" id="f-ciudad">
+                <label for="ciudad">Ciudad <span class="req">*</span></label>
+                <input type="text" id="ciudad" name="ciudad" autocomplete="address-level2" placeholder="Ej: Orlando" />
+                <p class="err">Escribe tu ciudad.</p>
+              </div>
+              <div class="field" id="f-estado">
+                <label for="estado">Estado <span class="req">*</span></label>
+                <input type="text" id="estado" name="estado" autocomplete="address-level1" placeholder="Ej: Florida" />
+                <p class="err">Escribe tu estado.</p>
+              </div>
+            </div>
+            <div class="grid2">
+              <div class="field" id="f-telefono">
+                <label for="telefono">Teléfono <span class="req">*</span></label>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="Ej: 407-555-0123" />
+                <p class="err">Escribe un teléfono válido donde podamos contactarte.</p>
+              </div>
+              <div class="field" id="f-email">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="tucorreo@email.com" />
+                <p class="err">Escribe un email válido.</p>
+              </div>
+            </div>
+            <div class="grid2">
+              <div class="field" id="f-instagram">
+                <label for="instagram">Instagram <span class="req">*</span></label>
+                <input type="text" id="instagram" name="instagram" placeholder="@tuusuario" />
+                <p class="err">Escribe tu usuario de Instagram.</p>
+              </div>
+              <div class="field">
+                <label for="estatura">Estatura</label>
+                <input type="text" id="estatura" name="estatura" placeholder="Ej: 5'6&quot;" />
+              </div>
+            </div>
+            <div class="grid2">
+              <div class="field" id="f-experiencia">
+                <label for="experiencia">Experiencia <span class="req">*</span></label>
+                <select id="experiencia" name="experiencia">
+                  <option value="">Selecciona una opción</option>
+                  <option>Sin experiencia — quiero empezar</option>
+                  <option>Sesiones de fotos</option>
+                  <option>Videos musicales</option>
+                  <option>Comerciales</option>
+                  <option>Películas o series</option>
+                  <option>Pasarela o eventos</option>
+                  <option>De todo un poco</option>
+                </select>
+                <p class="err">Selecciona tu nivel de experiencia.</p>
+              </div>
+              <div class="field" id="f-disponibilidad">
+                <label for="disponibilidad">Disponibilidad <span class="req">*</span></label>
+                <select id="disponibilidad" name="disponibilidad">
+                  <option value="">Selecciona una opción</option>
+                  <option>Tiempo completo</option>
+                  <option>Fines de semana</option>
+                  <option>Por proyecto</option>
+                  <option>Flexible — me ajusto</option>
+                </select>
+                <p class="err">Selecciona tu disponibilidad.</p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="mensaje">Cuéntanos de ti <span style="color:var(--faint); font-weight:300;">(opcional)</span></label>
+              <textarea id="mensaje" name="mensaje" placeholder="Tu estilo, tus metas, algo que quieras que sepamos de ti..."></textarea>
+            </div>
+
+            <div class="field" style="margin-bottom:6px;">
+              <label>Tus 3 fotos <span class="req">*</span></label>
+              <p class="hint" style="margin-top:0;">Fotos recientes, claras y sin filtros exagerados. Las revisa solo el equipo de selección de la agencia.</p>
+            </div>
+            <div class="uploads">
+              <div class="upload" id="u-elegante">
+                <div class="thumb">
+                  <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  <img alt="Vista previa de tu foto en traje elegante" style="display:none;" />
+                </div>
+                <h4>1 · Traje elegante</h4>
+                <p>Tu mejor look de gala o de noche</p>
+                <label class="pick" for="fotoElegante">Subir foto</label>
+                <input type="file" id="fotoElegante" accept="image/*" />
+                <p class="fname"></p>
+              </div>
+              <div class="upload" id="u-lenceria">
+                <div class="thumb">
+                  <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  <img alt="Vista previa de tu foto en lencería" style="display:none;" />
+                </div>
+                <h4>2 · Lencería</h4>
+                <p>Conjunto de lencería, con clase</p>
+                <label class="pick" for="fotoLenceria">Subir foto</label>
+                <input type="file" id="fotoLenceria" accept="image/*" />
+                <p class="fname"></p>
+              </div>
+              <div class="upload" id="u-bano">
+                <div class="thumb">
+                  <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  <img alt="Vista previa de tu foto en traje de baño" style="display:none;" />
+                </div>
+                <h4>3 · Traje de baño</h4>
+                <p>Foto en traje de baño, cuerpo completo</p>
+                <label class="pick" for="fotoBano">Subir foto</label>
+                <input type="file" id="fotoBano" accept="image/*" />
+                <p class="fname"></p>
+              </div>
+            </div>
+
+            <div class="checks">
+              <label class="check" id="c-mayor">
+                <input type="checkbox" id="chkMayor" />
+                <span>Confirmo que tengo <strong>18 años o más</strong> y que la fecha de nacimiento que puse en esta solicitud es verdadera.</span>
+              </label>
+              <label class="check" id="c-fotos">
+                <input type="checkbox" id="chkFotos" />
+                <span>Confirmo que las tres fotos son <strong>mías</strong> y autorizo a Bad Clown Girls a revisarlas para evaluar mi solicitud.</span>
+              </label>
+            </div>
+
+            <div class="form-err" id="formErr" role="alert"></div>
+
+            <button type="submit" class="btn submit-btn" id="submitBtn">Enviar mi solicitud</button>
+            <p class="form-note">Tu solicitud se envía directo desde esta página, con tus fotos incluidas. Sin costo, sin compromiso.</p>
+          </form>
+
+          <div class="success" id="successBox">
+            <div class="ring"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <h3>¡Solicitud recibida!</h3>
+            <p>Tu solicitud llegó completa a la agencia, con tus datos y tus tres fotos. Nuestro equipo de selección la revisa personalmente.</p>
+            <div class="attach">Si tu perfil encaja con el roster de <strong>Bad Clown Girls</strong>, te contactamos por teléfono, email o Instagram. Mantén tu teléfono cerca: puede ser el comienzo de algo grande.</div>
+            <p style="font-size:14.5px;">Gracias por querer formar parte de la familia Bad Clown.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <div class="logo-stage" style="margin-bottom:14px;"><img class="flogo" src="assets/asset-01.webp" alt="" width="2200" height="2480" /></div>
+      <p class="brand">Bad Clown Girls</p>
+      <p>Agencia de video girls y modelos · Una división de Bad Clown Family</p>
+      <p>Teléfono de la compañía: <a href="tel:+13528398557">(352) 839-8557</a></p>
+      <div class="contact-row">
+        <a class="btn small" href="tel:+13528398557"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Llamar</a>
+                <a class="btn small ghost" href="mailto:info@badclownfamily.site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Correo</a>
+      </div>
+      <p>Contacto: <a href="mailto:info@badclownfamily.site">info@badclownfamily.site</a></p>
+      <p>Inscripción exclusiva para mayores de 18 años.</p>
+    </footer>
+
+    <!-- ============ STICKY CTA ============ -->
+    <div class="sticky-cta">
+      <span class="txt">¿Lista para ser una Bad Clown Girl?</span>
+      <a class="btn" href="#unirme">Quiero unirme</a>
+    </div>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Foto ampliada">
+      <button class="close" id="lbClose" aria-label="Cerrar">×</button>
+      <img id="lbImg" alt="" />
+      <p class="cap" id="lbCap"></p>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        /* ---------- Lightbox ---------- */
+        var lb = document.getElementById("lightbox");
+        var lbImg = document.getElementById("lbImg");
+        var lbCap = document.getElementById("lbCap");
+        function openLb(fig) {
+          var img = fig.querySelector("img");
+          var cap = fig.querySelector("figcaption");
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          lbCap.textContent = cap ? cap.textContent : "";
+          lb.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+        function closeLb() {
+          lb.classList.remove("open");
+          document.body.style.overflow = "";
+        }
+        document.querySelectorAll("#gallery figure").forEach(function (fig) {
+          fig.addEventListener("click", function () { openLb(fig); });
+          fig.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLb(fig); }
+          });
+        });
+        document.getElementById("lbClose").addEventListener("click", closeLb);
+        lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
+        document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
+
+        /* ---------- Age validation ---------- */
+        var dobInput = document.getElementById("nacimiento");
+        var dobField = document.getElementById("f-nacimiento");
+        var dobErr = document.getElementById("nacimientoErr");
+        function ageFromDob(value) {
+          if (!value) return null;
+          var parts = value.split("-");
+          if (parts.length !== 3) return null;
+          var birth = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+          if (isNaN(birth.getTime())) return null;
+          var now = new Date();
+          var age = now.getFullYear() - birth.getFullYear();
+          var m = now.getMonth() - birth.getMonth();
+          if (m < 0 || (m === 0 && now.getDate() < birth.getDate())) age--;
+          return age;
+        }
+        function checkDob(showError) {
+          var age = ageFromDob(dobInput.value);
+          var bad = age === null || age < 18;
+          if (age !== null && age < 18) {
+            dobErr.textContent = "Tienes " + age + " años. La inscripción es solo para mayores de 18 años.";
+          } else if (age === null) {
+            dobErr.textContent = "Escribe tu fecha de nacimiento.";
+          } else {
+            dobErr.textContent = "Debes ser mayor de 18 años para inscribirte.";
+          }
+          dobField.classList.toggle("invalid", showError && bad);
+          return !bad;
+        }
+        dobInput.addEventListener("change", function () { checkDob(true); });
+        dobInput.addEventListener("blur", function () { if (dobInput.value) checkDob(true); });
+
+        /* ---------- Uploads with preview ---------- */
+        var uploads = [
+          { input: document.getElementById("fotoElegante"), box: document.getElementById("u-elegante"), label: "Foto en traje elegante" },
+          { input: document.getElementById("fotoLenceria"), box: document.getElementById("u-lenceria"), label: "Foto en lencería" },
+          { input: document.getElementById("fotoBano"), box: document.getElementById("u-bano"), label: "Foto en traje de baño" }
+        ];
+        uploads.forEach(function (u) {
+          u.input.addEventListener("change", function () {
+            var file = u.input.files && u.input.files[0];
+            var img = u.box.querySelector(".thumb img");
+            var svg = u.box.querySelector(".thumb svg");
+            var fname = u.box.querySelector(".fname");
+            if (!file) {
+              u.box.classList.remove("has-file");
+              img.style.display = "none"; img.src = "";
+              if (svg) svg.style.display = "";
+              fname.textContent = "";
+              return;
+            }
+            if (!/^image\//.test(file.type)) {
+              u.input.value = "";
+              return;
+            }
+            var reader = new FileReader();
+            reader.onload = function (ev) {
+              img.src = ev.target.result;
+              img.style.display = "block";
+              if (svg) svg.style.display = "none";
+            };
+            reader.readAsDataURL(file);
+            fname.textContent = file.name;
+            u.box.classList.add("has-file");
+          });
+        });
+
+        /* ---------- Form submit -> FormSubmit AJAX (direct, in-page) ---------- */
+        var form = document.getElementById("applyForm");
+        var formErr = document.getElementById("formErr");
+        var successBox = document.getElementById("successBox");
+        var submitBtn = document.getElementById("submitBtn");
+
+        function markField(id, bad) {
+          document.getElementById(id).classList.toggle("invalid", bad);
+          return !bad;
+        }
+        function val(id) { return document.getElementById(id).value.trim(); }
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var problems = [];
+
+          var okNombre = markField("f-nombre", val("nombre").length < 3);
+          var okDob = checkDob(true);
+          var okCiudad = markField("f-ciudad", val("ciudad").length < 2);
+          var okEstado = markField("f-estado", val("estado").length < 2);
+          var okTel = markField("f-telefono", val("telefono").replace(/\D/g, "").length < 7);
+          var okEmail = markField("f-email", !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val("email")));
+          var okIg = markField("f-instagram", val("instagram").length < 2);
+          var okExp = markField("f-experiencia", val("experiencia") === "");
+          var okDisp = markField("f-disponibilidad", val("disponibilidad") === "");
+
+          var missingPhotos = uploads.filter(function (u) { return !(u.input.files && u.input.files.length); });
+          uploads.forEach(function (u) {
+            u.box.style.borderColor = (u.input.files && u.input.files.length) ? "" : "var(--red)";
+          });
+
+          var chkMayor = document.getElementById("chkMayor");
+          var chkFotos = document.getElementById("chkFotos");
+          document.getElementById("c-mayor").classList.toggle("invalid", !chkMayor.checked);
+          document.getElementById("c-fotos").classList.toggle("invalid", !chkFotos.checked);
+
+          if (!okNombre || !okCiudad || !okEstado || !okTel || !okEmail || !okIg || !okExp || !okDisp) {
+            problems.push("Revisa los campos marcados en rojo.");
+          }
+          if (!okDob) problems.push("La inscripción es solo para mayores de 18 años.");
+          if (missingPhotos.length) {
+            problems.push("Te falta subir: " + missingPhotos.map(function (u) { return u.label.toLowerCase(); }).join(", ") + ".");
+          }
+          if (!chkMayor.checked || !chkFotos.checked) {
+            problems.push("Marca las dos casillas de confirmación al final del formulario.");
+          }
+
+          if (problems.length) {
+            formErr.innerHTML = "<strong>Tu solicitud no está completa:</strong><br>" + problems.join("<br>");
+            formErr.classList.add("show");
+            formErr.scrollIntoView({ behavior: "smooth", block: "center" });
+            return;
+          }
+          formErr.classList.remove("show");
+
+          var age = ageFromDob(dobInput.value);
+          var data = new FormData();
+          data.append("_subject", "Solicitud Bad Clown Girls — " + val("nombre"));
+          data.append("_template", "table");
+          data.append("_captcha", "true");
+          data.append("_replyto", val("email"));
+          data.append("Nombre completo", val("nombre"));
+          data.append("Fecha de nacimiento", dobInput.value + " (" + age + " años)");
+          data.append("Ciudad", val("ciudad"));
+          data.append("Estado", val("estado"));
+          data.append("Teléfono", val("telefono"));
+          data.append("Email", val("email"));
+          data.append("Instagram", val("instagram"));
+          data.append("Estatura", val("estatura") || "No indicada");
+          data.append("Experiencia", val("experiencia"));
+          data.append("Disponibilidad", val("disponibilidad"));
+          data.append("Sobre mí", val("mensaje") || "(Sin mensaje)");
+          data.append("Confirma 18+", "Sí, confirmo que tengo 18 años o más");
+          data.append("Autoriza revisión de fotos", "Sí, las fotos son mías y autorizo a Bad Clown Girls a revisarlas");
+          data.append("Foto traje elegante", uploads[0].input.files[0]);
+          data.append("Foto lencería", uploads[1].input.files[0]);
+          data.append("Foto traje de baño", uploads[2].input.files[0]);
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Enviando tu solicitud...";
+
+          fetch("https://formsubmit.co/ajax/info@badclownfamily.site", {
+            method: "POST",
+            headers: { "Accept": "application/json" },
+            body: data
+          }).then(function (res) {
+            if (!res.ok) throw new Error("send failed");
+            return res.json();
+          }).then(function () {
+            form.style.display = "none";
+            successBox.classList.add("show");
+            successBox.scrollIntoView({ behavior: "smooth", block: "center" });
+          }).catch(function () {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Enviar mi solicitud";
+            formErr.innerHTML = "<strong>No se pudo enviar tu solicitud.</strong><br>Revisa tu conexión a internet e inténtalo de nuevo. Tus datos y tus fotos siguen aquí, no tienes que llenarlos otra vez.";
+            formErr.classList.add("show");
+            formErr.scrollIntoView({ behavior: "smooth", block: "center" });
+          });
+        });
+        /* ---------- Client form submit -> FormSubmit AJAX ---------- */
+        var clientForm = document.getElementById("clientForm");
+        var clientErr = document.getElementById("clientErr");
+        var clientSuccess = document.getElementById("clientSuccess");
+        var clientBtn = document.getElementById("clientSubmitBtn");
+        function cval(id) { return document.getElementById(id).value.trim(); }
+        function cmark(id, bad) {
+          document.getElementById(id).classList.toggle("invalid", bad);
+          return !bad;
+        }
+        clientForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var okN = cmark("cf-nombre", cval("cliNombre").length < 3);
+          var okT = cmark("cf-telefono", cval("cliTelefono").replace(/\D/g, "").length < 7);
+          var okE = cmark("cf-email", !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(cval("cliEmail")));
+          var okTipo = cmark("cf-tipo", cval("cliTipo") === "");
+          var okCiu = cmark("cf-ciudad", cval("cliCiudad").length < 2);
+          var okFec = cmark("cf-fecha", cval("cliFecha") === "");
+          var okCant = cmark("cf-cantidad", cval("cliCantidad") === "");
+          if (!okN || !okT || !okE || !okTipo || !okCiu || !okFec || !okCant) {
+            clientErr.innerHTML = "<strong>Tu solicitud no está completa:</strong><br>Revisa los campos marcados en rojo.";
+            clientErr.classList.add("show");
+            clientErr.scrollIntoView({ behavior: "smooth", block: "center" });
+            return;
+          }
+          clientErr.classList.remove("show");
+          var cdata = new FormData();
+          cdata.append("_subject", "Solicitud de CLIENTE — Contratar modelos — " + cval("cliNombre"));
+          cdata.append("_template", "table");
+          cdata.append("_captcha", "true");
+          cdata.append("_replyto", cval("cliEmail"));
+          cdata.append("Nombre", cval("cliNombre"));
+          cdata.append("Compañía / Nombre artístico", cval("cliCompania") || "No indicado");
+          cdata.append("Teléfono", cval("cliTelefono"));
+          cdata.append("Email", cval("cliEmail"));
+          cdata.append("Tipo de proyecto", cval("cliTipo"));
+          cdata.append("Ciudad", cval("cliCiudad"));
+          cdata.append("Fecha del proyecto", cval("cliFecha"));
+          cdata.append("Modelos que necesita", cval("cliCantidad"));
+          cdata.append("Mensaje", cval("cliMensaje") || "(Sin mensaje)");
+          clientBtn.disabled = true;
+          clientBtn.textContent = "Enviando tu solicitud...";
+          fetch("https://formsubmit.co/ajax/info@badclownfamily.site", {
+            method: "POST",
+            headers: { "Accept": "application/json" },
+            body: cdata
+          }).then(function (res) {
+            if (!res.ok) throw new Error("send failed");
+            return res.json();
+          }).then(function () {
+            clientForm.style.display = "none";
+            clientSuccess.classList.add("show");
+            clientSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
+          }).catch(function () {
+            clientBtn.disabled = false;
+            clientBtn.textContent = "Enviar solicitud de contratación";
+            clientErr.innerHTML = "<strong>No se pudo enviar tu solicitud.</strong><br>Revisa tu conexión e inténtalo de nuevo, o llámanos al (352) 839-8557. Tus datos siguen aquí, no tienes que llenarlos otra vez.";
+            clientErr.classList.add("show");
+            clientErr.scrollIntoView({ behavior: "smooth", block: "center" });
+          });
+        });
+
+      })();
+    </script>
+  </body>
+</html>
